@@ -1,0 +1,36 @@
+# Dependências do Node.js
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build e arquivos temporários
+dist/
+build/
+.cache/
+.vite/
+.out/
+temp/
+*.log
+*.tmp
+
+# Configurações do editor de código
+.vscode/
+.idea/
+*.swp
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ambientes e credenciais
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
