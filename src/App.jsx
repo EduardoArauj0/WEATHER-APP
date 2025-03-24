@@ -2,7 +2,12 @@ import React from "react";
 
 function App() {
   return (
-    <h1>Ola, Mundo!</h1>
+    <div>
+      
+      <form>
+        <input type="text" placeholder="Cidade" />
+      </form>
+    </div>
   );
 }
 
