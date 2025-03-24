@@ -6,6 +6,7 @@ function App() {
       
       <form>
         <input type="text" placeholder="Cidade" />
+        <button type="submit">Pesquisar</button>
       </form>
     </div>
   );
