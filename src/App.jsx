@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import fetchData from "./services/api";
 
 import Card from "./components/card";
@@ -6,11 +6,14 @@ import Card from "./components/card";
 
 function App() {
 
+  const [city, setCity] = useState('');
+  const [date, setDate] = useState({});
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetchData('Salvador').then( (response) => {
-      console.log(response);
+    fetchData(city).then( (response) => {
+      setDate(response);
     });
   }
 
@@ -22,6 +25,8 @@ function App() {
         type="text" 
         placeholder="Cidade" 
         className="p-3 rounded-lg outline-none"
+        value={city}
+        onChange={({ target: {value} }) => setCity(value)}
         />
         <button 
         type="submit"
@@ -31,7 +36,7 @@ function App() {
         </button>
       </form>
 
-      <Card />
+      <Card date = {date} />
     </div>
   );
 }
