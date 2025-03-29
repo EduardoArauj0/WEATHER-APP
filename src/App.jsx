@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import fetchData from "./services/api";
+import initialDate from "./services/helpers/initialDate";
 
 import Card from "./components/card";
 
@@ -7,7 +8,7 @@ import Card from "./components/card";
 function App() {
 
   const [city, setCity] = useState('');
-  const [date, setDate] = useState({});
+  const [date, setDate] = useState(initialDate);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,7 +37,7 @@ function App() {
         </button>
       </form>
 
-      <Card date = {date} />
+      <Card data = {date} />
     </div>
   );
 }
